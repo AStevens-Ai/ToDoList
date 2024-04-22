@@ -1,0 +1,78 @@
+/* Hide the modal by default */
+.modal {
+  display: none;
+}
+
+/* Show the modal when it's active */
+.modal.active {
+  display: block;
+}
+
+/* Style the backdrop when the modal is displayed */
+.modal.active::backdrop {
+  /* Your backdrop styles here */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+/* Style the close button */
+.modal .close-btn {
+  /* Your close button styles here */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Style the form inside the modal */
+.modal form {
+  /* Your form styles here */
+  padding: 20px;
+}
+
+/* Style the form inputs and labels */
+.modal form label {
+  /* Your label styles here */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal form input,
+.modal form textarea,
+.modal form select {
+  /* Your input styles here */
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+.modal form button[type='submit'] {
+  /* Your submit button styles here */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the open button */
+.open-btn {
+  /* Your open button styles here */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.open-btn:hover {
+  background-color: #0056b3;
+}
