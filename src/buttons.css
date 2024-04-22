@@ -1,0 +1,89 @@
+:root {
+    --btn-bg-color: rgb(129 120 255 / 1);
+    --btn-bg-color-hover: rgb(129 120 255 / 1);
+    --font-color-white: rgb(255 255 255 / 1);
+    --font-color-black: rgb(0 0 0 / 1);
+}
+
+a:focus,
+button:focus {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #443ffc;
+    outline-offset: 3px;
+}
+
+a:focus-visible {
+    background: none;
+}
+
+.button-def {
+    pointer-events: auto;
+    cursor: pointer;
+    background: var(--btn-bg-color);
+    color: var(--font-color-black);
+    border: none;
+    padding: 1.5rem 2rem;
+    margin: 2px;
+    height: auto;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.button-def + .order-btn {
+    margin-left: 20px;
+}
+.button-5 {
+    font-family: sans-serif;
+    font-weight:600;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.button-5>span {
+    display: inline-block;
+    transition: opacity 0.1s;
+}
+
+.learn-btn {
+    margin-left: 20px
+}
+
+.button-5 .marquee {
+    transform: rotate(-2.75deg);
+}
+
+.button-5 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: var(--font-color-white)
+  }
+.button-5 span:after {
+    content: '\00bb';
+    color: rgb(200, 45, 45);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+.button-5:hover span {
+    padding-right: 25px;
+  }
+
+.button-5:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.open-modal {
+    padding: 10px
+}
+

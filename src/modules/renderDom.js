@@ -5,10 +5,12 @@ export default function renderDom(callback) {
 
   // Page content
   const openBtn = document.createElement('button');
-  openBtn.textContent = 'Open Modal';
+  openBtn.textContent = 'Create Todo';
+  openBtn.classList.add('button-def', 'button-5', 'open-modal')
 
   // Modal content
   const closeBtn = document.createElement('button');
+  closeBtn.classList.add('close-btn', 'button-def', 'button-5')
   closeBtn.textContent = 'X';
   closeBtn.style.display = 'none'; // Initially hide the close button
 
@@ -85,7 +87,7 @@ export default function renderDom(callback) {
   const todos = document.querySelector('.list');
   if (todos) {
     // Check if '.list' element exists
-    todos.appendChild(openBtn); // Append open button to '.list' element
+    document.body.appendChild(openBtn); // Append open button to '.list' element
   } else {
     console.error("Element with class 'list' not found.");
   }
@@ -126,5 +128,12 @@ export default function renderDom(callback) {
       callback(formData);
     }
     modalCtn.style.display = 'none';
+    //reset all fields to empty
+    titleInput.value = ''
+    descriptionInput.value = ''
+    duedateInput.value = ''
+    priorityInput.value = ''
+    notesInput.value = ''
+    checklistInput.value = ''
   });
 }
